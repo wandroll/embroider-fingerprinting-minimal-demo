@@ -3,10 +3,13 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const { Webpack } = require('@embroider/webpack');
 
+const webpackConfig = require('./webpack.config');
+
 module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
     // Add options here
   });
+  let env = EmberApp.env();
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
@@ -21,5 +24,9 @@ module.exports = function (defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return require('@embroider/compat').compatBuild(app, Webpack);
+  return require('@embroider/compat').compatBuild(app, Webpack, {
+    packagerOptions: {
+      webpackConfig: webpackConfig({ env }),
+    },
+  });
 };
