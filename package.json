@@ -65,5 +65,12 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@babel/core"
+      ]
+    }
   }
 }
