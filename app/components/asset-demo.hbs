@@ -1,0 +1,55 @@
+<div>
+  <h1>Embroider assets loading strategy</h1>
+  <table class='asset-demo'>
+    <thead>
+      <tr>
+        <th>Asset origin</th>
+        <th>Fingerprinted</th>
+        <th>Display</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Public folder assets are simply copied to the dist
+        </td>
+        <td>No</td>
+        <td>
+          <img
+            class='imported-asset'
+            src='/illustrations/check_0.svg'
+            alt=''
+            role='presentation'
+            data-test-illustration
+          /></td>
+      </tr>
+      <tr>
+        <td>This image is loaded with webpack assets modules from app/static -</td>
+        <td>Yes</td>
+        <td>
+          <img
+            class='imported-asset'
+            src={{import-asset '/illustrations/check_1.svg'}}
+            alt=''
+            role='presentation'
+            data-test-illustration
+          /></td>
+      </tr>
+      <tr>
+        <td>This image is loaded from CSS, using `public` and not fingerprinted</td>
+        <td>No</td>
+        <td>
+          <div class='with-background' />
+        </td>
+      </tr>
+      <tr>
+        <td>This image is loaded from CSS, using `relative path`</td>
+        <td>No</td>
+        <td>
+          <div class='with-background-relative-path' />
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
