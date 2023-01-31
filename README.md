@@ -1,6 +1,8 @@
 # embroider-fingerprinting-minimal-demo
 
-A minimal Ember js - Embroider-based app to show fingerprinting issues with the current state of embroider
+A minimal Ember js - Embroider-based app to show fingerprinting issues with the current state of embroider.
+
+See [FINGERPRINTING.md](FINGERPRINTING.md)
 
 ## Installation
 
