@@ -20,9 +20,9 @@ In short, we need to find a new way to get our assets fingerprinted.
 
 ## JSON Assets
 
-One common case for JSON assets is translations. As opposed to images, it is essential to make sure visitors gets the latest version of it and it is often subject to updates between releases.
+One common case for JSON assets is translations. As opposed to images, it is essential to make sure visitors get the latest version of it and it is often subject to updates between releases.
 
-For Ember, typically, we would fetch them based on the current locale and inject them to `ember-intl` service[See this example](https://ember-intl.github.io/ember-intl/docs/guide/asynchronously-loading-translations).
+For Ember, typically, we would fetch them based on the current locale and inject them to `ember-intl` service. [See this example](https://ember-intl.github.io/ember-intl/docs/guide/asynchronously-loading-translations).
 
 Translations JSON files can be treated as regular JS modules. Thanks to [Ember-auto-import](https://github.com/ef4/ember-auto-import), we're now capable to import them dynamically.
 
@@ -101,8 +101,10 @@ We'd like also to be capable of fingerprinting fonts and background images from 
 
 ```css
 .foo {
-  background-image: url('../static/icon/bar.svg');
+  background-image: url('./static/icon/bar.svg');
 }
 ```
 
-[Embroider's webpack configuration](https://github.com/embroider-build/embroider/blob/main/packages/webpack/src/ember-webpack.ts#L576-L584) already setups some configuration for `css-loader`. Though it resolve only the URL but does not do the import
+[Embroider's webpack configuration](https://github.com/embroider-build/embroider/blob/main/packages/webpack/src/ember-webpack.ts#L576-L584) already setups some configuration for `css-loader`. Though it resolves the URL but not the import :
+
+With current settings :
