@@ -15,6 +15,8 @@ See [FINGERPRINTING.md](FINGERPRINTING.md)
 - `pnpm start`
 - Visit the demo at [http://localhost:4200](http://localhost:4200/demo).
 
+![Test result at http://localhost:4200/demo](public/demo_screenshot.png?raw=true 'Title')
+
 ## Further Reading / Useful Links
 
 - [Embroider](https://github.com/embroider-build/embroider)
