@@ -105,6 +105,6 @@ We'd like also to be capable of fingerprinting fonts and background images from 
 }
 ```
 
-[Embroider's webpack configuration](https://github.com/embroider-build/embroider/blob/main/packages/webpack/src/ember-webpack.ts#L576-L584) already setups some configuration for `css-loader`. Though it resolves the URL but not the import :
+[Embroider's webpack configuration](https://github.com/embroider-build/embroider/blob/main/packages/webpack/src/ember-webpack.ts#L576-L584) already setups some configuration for `css-loader`. Though it resolves the URL but not the import.
 
-With current settings :
+![Test result at http://localhost:4200/demo](public/demo_screenshot.png?raw=true 'Title')
